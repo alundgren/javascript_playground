@@ -165,7 +165,6 @@
                             return new photoModel(getPhotoUrl(p, 'm'), getPhotoUrl(p, 'b'));
                         }).value();
                     viewModel.nrOfPages(parseInt(data.photos.pages));
-                    viewModel.currentPage(parseInt(data.photos.page));
                     viewModel.photos(photosModel);
                 }
             }
