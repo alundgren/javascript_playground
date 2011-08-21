@@ -73,7 +73,8 @@
             function displayNameAndNumberOfUpVotesOfMostUpvotedAnswer(data) {
                 return _(data.answers)
                     .chain()
-                    .map(function (a) { return { votes: a.up_vote_count, name: a.owner.display_name }; })
+                    .map(function (a) { 
+                        return { votes: a.up_vote_count, name: a.owner.display_name }; })
                     .sortBy(function (a) { return a.votes; })
                     .reverse()
                     .first()
@@ -88,6 +89,7 @@
                         };
                     });
             }
+
 
             function totalUserCountThatDoesntWork(data) {
                 return _(data.answers)
